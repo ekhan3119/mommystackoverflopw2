@@ -26,7 +26,7 @@ const db = require('./config/keys').mongoURI;
 process.env.MONGODB_URI || "mongodb://localhost/developernetwork"
 ); */
 
-mongoose.connect('mongodb://127.0.0.1:27017/developernetwork', { useNewUrlParser: true });
+mongoose.connect('mongodb://chuck:password1@ds143156.mlab.com:43156/heroku_8l7l35pg', { useNewUrlParser: true });
 const connection = mongoose.connection;
 connection.once('open', function () {
     console.log("MongoDB database connection established successfully");

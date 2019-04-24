@@ -1,4 +1,4 @@
 module.exports = {
-    mongoURI: 'mongodb+srv://eva_3119:F@ltu123@cluster0-erxgu.mongodb.net/test?retryWrites=true',
+    mongoURI: 'mongodb://chuck:password1@ds143156.mlab.com:43156/heroku_8l7l35pg',
     secretOrKey: 'SECRET'
 };
