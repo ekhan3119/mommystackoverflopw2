@@ -5,19 +5,25 @@ module.exports = function validateProfileInput(data) {
     let errors = {};
 
     data.handle = !isEmpty(data.handle) ? data.handle : '';
-    data.status = !isEmpty(data.status) ? data.status : '';
 
 
     if (!Validator.isLength(data.handle, { min: 2, max: 40 })) {
-        errors.handle = 'Handle needs to between 2 and 4 character';
+        errors.handle = 'Handle needs to between 2 and 4 characters';
     }
     if (Validator.isEmpty(data.handle)) {
         errors.handle = 'Profile handle is required';
 
     }
-    if (Validator.isEmpty(data.status)) {
-        errors.handle = 'status field is required';
 
+    if (!isEmpty(data.youtube)) {
+        if (!Validator.isURL(data.youtube)) {
+            errors.youtube = 'Not a valid URL';
+        }
+    }
+    if (!isEmpty(data.facebook)) {
+        if (!Validator.isURL(data.facebook)) {
+            errors.facebook = 'Not a valid URL';
+        }
     }
 
 

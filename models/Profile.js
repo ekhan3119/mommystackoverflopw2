@@ -20,6 +20,10 @@ const ProfileSchema = new Schema({
         facebook: {
             type: String
         }
+    },
+    date: {
+        type: Date,
+        default: Date.now
     }
 
 });
